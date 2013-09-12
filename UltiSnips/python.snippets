@@ -14,6 +14,16 @@ if __name__ == '__main__':
 	${1:main()}$0
 endsnippet
 
+snippet args "Parse command line arguments" b
+parser = argparse.ArgumentParser(description='${1:What the program does}')
+parser.add_argument('${2:--flag}'${3})
+args = parser.parse_args()
+endsnippet
+
+snippet arg "Add a command line argument" b
+parser.add_argument('${1:--${2:flag}}'${3:, help='${4:What the argument does}'${5}})
+endsnippet
+
 
 ##########
 # COMMON #
